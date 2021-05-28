@@ -54,6 +54,7 @@ export default {
   methods: {
 
     startSearch(obj) {
+      this.resetResults();
       if(obj.type === 'all') {
         this.getApi(obj.text, 'movie');
         this.getApi(obj.text, 'tv');
@@ -89,11 +90,8 @@ export default {
       
     }
 
-  },
-
-  created() {
-    this.getApi('shrek', 'multi');
   }
+  
 }
 
 </script>
@@ -101,5 +99,10 @@ export default {
 <style lang="scss">
 
 @import './assets/styles/general';
+
+h1 {
+  margin-top: 30px;
+  margin-left: 50px;
+}
 
 </style>

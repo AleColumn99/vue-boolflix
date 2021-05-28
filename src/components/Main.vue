@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+
     <h1>{{ titles[type] }}</h1>
     
     <Card
@@ -36,5 +37,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.container {
+  margin-bottom: 100px;
+  h1 {
+    margin-top: 30px;
+    margin-left: 50px;
+  }
+}
 
 </style>
