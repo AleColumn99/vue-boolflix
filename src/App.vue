@@ -6,21 +6,25 @@
       @startSearch="startSearch"
     />
 
-    <h1 v-if="results.movie.length === 0 && results.tv.length === 0">
-      Nessun risultato trovato
-    </h1>
+    <div class="container">
 
-    <Main 
-      v-if="results.movie.length > 0"
-      type="movie"
-      :list="results.movie"
-    />
+      <h1 v-if="results.movie.length === 0 && results.tv.length === 0">
+        Inizia la ricerca...
+      </h1>
 
-    <Main
-      v-if="results.tv.length > 0"
-      type="tv"
-      :list="results.tv"
-    />
+      <Main 
+        v-if="results.movie.length > 0"
+        type="movie"
+        :list="results.movie"
+      />
+
+      <Main
+        v-if="results.tv.length > 0"
+        type="tv"
+        :list="results.tv"
+      />
+
+    </div>
 
   </div>
 
@@ -100,9 +104,10 @@ export default {
 
 @import './assets/styles/general';
 
-h1 {
-  margin-top: 30px;
-  margin-left: 50px;
+.container {
+  width: 70%;
+  max-width: 1200px;
+  margin: 50px auto;
 }
 
 </style>

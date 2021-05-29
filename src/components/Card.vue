@@ -19,8 +19,7 @@
       </li>
 
       <li class="list-group-item">
-        <h4>Media voto: </h4> {{ card.vote_average }}
-        <h4>STELLINE: </h4> {{ voteToStars(card.vote_average) }}
+        <h4>Media voto: </h4>
         <i
           v-for="index in voteToStars(card.vote_average)"
           :key="index"
@@ -51,12 +50,7 @@ export default {
   },
   methods: {
     voteToStars(vote) {
-      let newVote = Math.ceil(vote / 2);
-      let starArray = [];
-      for (let i=0; i<newVote; i++) {
-        starArray.push(i);
-      }
-      return starArray;
+      return Math.ceil(vote / 2);
     }
   }
 }
@@ -70,7 +64,7 @@ export default {
     .lang img {
       height: 15px;
     }
-    li .star i {
+    li i {
       color: darkgoldenrod;
     }
   }

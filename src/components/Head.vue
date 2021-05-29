@@ -58,11 +58,12 @@ export default {
     margin: 0;
     background-color: darkslategrey;
     .header-container {
+      width: 80%;
       height: 100%;
+      margin: auto;
       align-items: center;
     }
     .search-bar {
-      margin-left: 100px;
       width: 70%;
       max-width: 1000px;
       input {
@@ -73,8 +74,10 @@ export default {
       }
     }
     .search-btn {
+      width: 30%;
+      
       button {
-        margin-left: 50px;
+        font-size: 10px;
         border: 0;
         border-radius: 999px;
         padding: 10px;
