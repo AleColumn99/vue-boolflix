@@ -6,11 +6,11 @@
       @startSearch="startSearch"
     />
 
-    <div class="container">
+    <div class="app-container">
 
-      <h1 v-if="results.movie.length === 0 && results.tv.length === 0">
+      <!-- <h1 v-if="results.movie.length === 0 && results.tv.length === 0">
         Inizia la ricerca...
-      </h1>
+      </h1> -->
 
       <Main 
         v-if="results.movie.length > 0"
@@ -104,9 +104,14 @@ export default {
 
 @import './assets/styles/general';
 
-.container {
+body {
+  background-color: black;
+  color: white;
+}
+
+.app-container {
   width: 70%;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 50px auto;
 }
 

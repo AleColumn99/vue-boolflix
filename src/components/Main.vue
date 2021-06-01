@@ -2,13 +2,17 @@
   <div class="container">
 
     <h1>{{ titles[type] }}</h1>
-    
-    <Card
-      v-for="card in list"
-      :key="card.id"
-      :card="card"
-    />
 
+    <div class="cards-container">
+   
+      <Card
+        v-for="card in list"
+        :key="card.id"
+        :card="card"
+      />
+
+    </div>
+ 
   </div>
 </template>
 
@@ -27,8 +31,8 @@ export default {
   data() {
     return {
       titles: {
-        'movie': 'Movies found',
-        'tv': 'TV Series found'
+        'movie': 'Film',
+        'tv': 'Serie TV'
       }
     }
   }
@@ -39,7 +43,12 @@ export default {
 <style lang="scss" scoped>
 
 .container {
-  margin-bottom: 100px;
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
   h1 {
     margin-top: 30px;
     margin-left: 50px;
